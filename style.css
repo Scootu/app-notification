@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap');
+
+:root {
+
+    --main-clr: #2B1D48;
+    --mar-side: #2C2446;
+    --main-content-clr: #32244E;
+    --hed-clr: #3D2E5C;
+    --text-clr: #8374A0;
+    --content-clr: #392A57;
+    --font-family: 'Rubik', sans-serif;
+    --ber-btn-clr: #F4356D;
+}
+
+html {
+    font-size: 60%;
+}
+
+body {
+
+    background-color: var(--main-clr);
+    font-family: var(--font-family);
+    height: 100vh;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+
+.notification {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    background-color: var(--mar-side);
+    position: relative;
+}
+
+.nofication-btn {
+    position: absolute;
+    left: 68%;
+    top: -21px;
+    padding: 1rem;
+    color: #FFDA44;
+    border: 1px solid var(--ber-btn-clr);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cart {
+    margin: 60px 0 0 0;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cart-animation-in {
+    animation-name: banner-in;
+    animation-direction: forwards;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.cart-animation-out {
+    display: none;
+    transform: translateY(-100%);
+}
+
+.hed-text {
+    font-size: 20px;
+    color: var(--text-clr);
+    text-transform: uppercase;
+    padding: 2rem;
+    background-color: var(--hed-clr);
+}
+
+.content {
+    background-color: var(--content-clr);
+    margin: 0;
+    list-style: none;
+    padding: 0 2rem;
+    /*i dont know how to conver this more dynamic*/
+    height: 450px;
+    overflow: hidden;
+    transition: all ease-in 0.3s;
+}
+
+.height {
+    height: 100%;
+}
+
+.item {
+    display: flex;
+    gap: 12px;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+.photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.content-text-item .full-name {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.message {
+    color: var(--text-clr);
+    font-size: 12px;
+}
+
+.keyword {
+    color: var(--ber-btn-clr);
+}
+
+.state {
+    color: var(--text-clr);
+
+}
+
+/*Btn view */
+
+.btn-view {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--ber-btn-clr);
+    padding: 2rem;
+    background-color: var(--hed-clr);
+    border: none;
+    cursor: pointer;
+}
+
+
+@keyframes banner-in {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
